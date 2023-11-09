@@ -1,0 +1,180 @@
+:root {
+  --link-color: rgb(206, 90, 103);
+  --link-hover-color: rgb(244, 191, 150);
+  --link-underline-padding: .5em;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(252, 245, 237);
+  color: rgb(31, 23, 23);
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: rgb(244, 191, 150);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+header img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: rgb(31, 23, 23);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 2.4em;
+}
+
+h3 a {
+  color: rgb(31, 23, 23);
+  text-decoration: none;
+  transition: color 0.5s, transform 0.2s ease-out;
+}
+
+h3 a:hover {
+  color: rgb(206, 90, 103);
+  transform: scale(1.2);
+}
+
+p a {
+  color: rgb(31, 23, 23);
+  text-decoration: none;
+}
+
+p a:hover {
+  color: rgb(206, 90, 103);
+}
+
+nav {
+  background-color: rgb(252, 245, 237);
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: var(--link-color);
+  text-decoration: none;
+  position: relative;
+  transition: color .5s;
+  margin: 0 15px;
+}
+
+nav a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  background-color: rgb(244, 191, 150);
+  height: .1em;
+  width: 0;
+  transition: width .5s;
+}
+
+nav a:hover {
+  color: var(--link-hover-color);
+}
+
+nav a:hover:after {
+  width: calc(100% + var(--link-underline-padding) * 2);
+}
+
+section {
+  padding: 50px 20px;
+}
+
+.project {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.project img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+footer {
+  background-color: rgb(206, 90, 103);
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+  color: rgb(252, 245, 237);
+}
+
+section#Languages ul li {
+  font-size: 1.2em;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.divider {
+  height: 2px;
+  background-color: rgb(206, 90, 103);
+  margin: 20px 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+.landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('images/landing-background1.jpg') center/cover;
+  color: rgb(31, 23, 23);
+  text-align: center;
+}
+
+.landing-page h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.landing-page p {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s;
+}
